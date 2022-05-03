@@ -1,10 +1,20 @@
 # Noticeboard
 
+An online notice board for the posting public messages to provide information to its users.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.0.
+
+# Requirements
+
+- Node JS
+- Angular-cli
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Clone project repo
+- CD into project folder
+- Run `npm i` to install node js modules
+- Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
