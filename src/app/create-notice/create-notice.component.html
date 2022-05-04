@@ -1,0 +1,29 @@
+<div class="main-div">
+  <form (ngSubmit)="submit()" novalidate [formGroup]="createForm">
+
+      <div *ngIf="errMsg" class="alert alert-danger">{{ errMsg }}</div>
+
+    <div class="form-group">
+      <h1>Create New Notice</h1>
+    </div>
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text" class="form-control" formControlName="title" name="title" placeholder="Enter title">
+
+      <div *ngIf="createForm.controls['title'].invalid && submitted">
+        <small *ngIf="createForm.controls['title'].errors.required" class="form-text text-danger" required>Required</small>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea  rows="10" class="form-control" formControlName="description" name="description" placeholder="Enter description" required></textarea>
+
+      <div *ngIf="createForm.controls['description'].invalid && submitted">
+        <small *ngIf="createForm.controls['description'].errors.required" class="form-text text-danger" required>Required</small>
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="loading"> <img
+      *ngIf="loading" src="/assets/loading.gif" style="width: 20px;"> Create</button>
+  </form>
+</div>

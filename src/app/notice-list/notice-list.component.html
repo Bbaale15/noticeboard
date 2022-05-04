@@ -1,0 +1,21 @@
+
+  <div class="list-container">
+
+
+    <div class="row">
+     <p *ngIf="notices.length == 0" class="alert alert-info">No notices at the moment!!</p>
+
+      <div class="col-md-3"  *ngFor="let notice of notices;">
+        <div class="card" style="width: 18rem; background: #fff6d8;" >
+          <div class="card-body">
+            <h3 class="card-title">{{ notice.title }}</h3>
+            <h6 class="card-subtitle mb-2 text-muted">Posted on : {{ notice.createdAt | date: 'MMM d, y, h:mm:ss a'}}</h6>
+            <p class="card-text">{{ notice.description }}</p>
+            <a [routerLink]="['/edit', notice._id]" class="card-link">Edit</a>
+            <a (click)="deleteNotice(notice._id)" class="card-link delete-link">Delete</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
