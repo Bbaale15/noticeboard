@@ -13,7 +13,7 @@ export class CreateNoticeComponent implements OnInit {
   createForm: FormGroup;
   submitted = false;
   loading = false;
-  errMsg: string = '';
+  errMsg = '';
 
   constructor(
     private formBuilder: FormBuilder,

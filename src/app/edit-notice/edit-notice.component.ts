@@ -14,7 +14,7 @@ export class EditNoticeComponent implements OnInit {
   editForm: FormGroup;
   submitted = false;
   loading = false;
-  errMsg: string = '';
+  errMsg = '';
   id: string;
   notice: INotice;
 
